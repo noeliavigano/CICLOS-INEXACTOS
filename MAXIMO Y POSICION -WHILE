@@ -1,0 +1,31 @@
+Hacer un programa para ingresar una lista de números que finaliza cuando se ingresa un cero,
+luego informar el máximo y la posición dentro de la lista.
+Ejemplo: 5, 10, 20, 8, 25, 13, 35, -8, -5, 20, 0. Se listará Máximo: 35 - Posición: 7.
+Ejemplo: 5, 10, 20, 8, 55, 13, 55, -8, -5, 20, 0. Se listará Máximo: 55 - Posición: 5.
+Ejemplo: -5, -10, -20, -8, -55, -400, -15, -20, 0. Se listará Máximo: -5 - Posición: 1.
+
+*/
+
+#include <iostream>
+using namespace std;
+int main (){
+int  cont=0, pos;
+float numero, maximo;
+cout<<"ingrese un numero"<< endl;
+cin>>numero;
+maximo=numero;
+while(numero!=0){
+  cont++;
+if(cont==1|| numero>maximo){
+    maximo=numero;
+    pos=cont;
+}
+cin>>numero;
+
+}
+cout<<"el maximo valor ingresado es "<<maximo <<" y la posicion " <<pos<< endl;
+
+
+return 0;
+
+}
